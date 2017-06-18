@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE world
+[
+<!ELEMENT region (country+)>
+<!ELEMENT country (university+)>
+<!ELEMENT university (department+, rank+)>
+<!ELEMENT department (degree+)>
+<!ELEMENT degree (#PCDATA)>
+]>
+
 <world>
   <region>Asia</region>
     <country>Singapore</country>
