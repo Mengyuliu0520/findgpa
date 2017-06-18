@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<world>
+  <region>Asia</region>
+    <country>Singapore</country>
+  <region>Europe</region>
+    <country>UK</country>
+  <region>America</region>
+    <country>US</country>
+  <region>Australia</region>
+    <country>Australia</country>
+  <region>Africa</region>
+    <country>South Africa</country>
+</world>
