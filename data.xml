@@ -5,7 +5,17 @@
 <!ELEMENT region (country+)>
 <!ELEMENT country (university+)>
 <!ELEMENT university (department+, rank+)>
-<!ELEMENT department (degree+)>
+<!ATTLIST university
+    code ID#REQUIRED
+    name CDATA#REQUIRED
+>
+<!ELEMENT department (degree+, rank+)>
+<!ELEMENT rank (type)>
+<!ATTLIST rank
+    name (ARWU|QS)
+>
+<!ELEMENT type (#PCDATA)>
+
 <!ELEMENT degree (#PCDATA)>
 ]>
 
