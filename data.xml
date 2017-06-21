@@ -4,19 +4,30 @@
 [
 <!ELEMENT region (country+)>
 <!ELEMENT country (university+)>
-<!ELEMENT university (department+, rank+)>
+<!ELEMENT university (campus+, rank+)>
 <!ATTLIST university
+    language CDATA#REQUIRED
     code ID#REQUIRED
     name CDATA#REQUIRED
 >
+<!ELEMENT campus (department+)>
+<!ATTLIST campus
+    name CDATA#REQUIRED
+    location CDATA#IMPLIED
+>
 <!ELEMENT department (degree+, rank+)>
-<!ELEMENT rank (type)>
+<!ELEMENT rank (#PCDATA)>
 <!ATTLIST rank
     name (ARWU|QS)
+    year CDATA#REQUIRED
 >
-<!ELEMENT type (#PCDATA)>
-
 <!ELEMENT degree (#PCDATA)>
+<!ATTLIST degree
+    mingpa CDATA#IMPLIED
+    suggpa CDATA#IMPLIED
+    name CDATA#REQUIRED
+    period CDATA#REQUIRED
+>
 ]>
 
 <world>
@@ -28,6 +39,4 @@
     <country>US</country>
   <region>Australia</region>
     <country>Australia</country>
-  <region>Africa</region>
-    <country>South Africa</country>
 </world>
