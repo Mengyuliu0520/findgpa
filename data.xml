@@ -6,37 +6,39 @@
 <!ELEMENT country (university+)>
 <!ELEMENT university (campus+, rank+)>
 <!ATTLIST university
-    language CDATA#REQUIRED
-    code ID#REQUIRED
-    name CDATA#REQUIRED
+    language CDATA #REQUIRED
+    code ID #REQUIRED
+    name CDATA #REQUIRED
 >
 <!ELEMENT campus (department+)>
 <!ATTLIST campus
-    name CDATA#REQUIRED
-    location CDATA#IMPLIED
+    name CDATA #REQUIRED
+    location CDATA #IMPLIED
+    url CDATA #REQUIRED
 >
 <!ELEMENT department (degree+, rank+)>
+<!ATTLIST department name CDATA #IMPLIED>
 <!ELEMENT rank (#PCDATA)>
 <!ATTLIST rank
     name (ARWU|QS)
-    year CDATA#REQUIRED
+    year CDATA #REQUIRED
 >
 <!ELEMENT degree (#PCDATA)>
 <!ATTLIST degree
-    mingpa CDATA#IMPLIED
-    suggpa CDATA#IMPLIED
-    name CDATA#REQUIRED
-    period CDATA#REQUIRED
+    mingpa CDATA #IMPLIED
+    suggpa CDATA #IMPLIED
+    name CDATA #REQUIRED
+    period CDATA #REQUIRED
 >
 ]>
 
 <world>
-  <region>Asia</region>
-    <country>Singapore</country>
-  <region>Europe</region>
-    <country>UK</country>
+  <region name="europe" />
+    <country name="UK" />
   <region>America</region>
     <country>US</country>
+      <university name="Stanford University">
+      </university>
   <region>Australia</region>
     <country>Australia</country>
 </world>
