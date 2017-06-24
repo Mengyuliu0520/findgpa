@@ -21,12 +21,12 @@
 <!ELEMENT rank (#PCDATA)>
 <!ATTLIST rank
     name (ARWU|QS)
+    ranking CDATA #IMPLIED
     year CDATA #REQUIRED
 >
 <!ELEMENT degree (#PCDATA)>
 <!ATTLIST degree
     mingpa CDATA #IMPLIED
-    suggpa CDATA #IMPLIED
     name CDATA #REQUIRED
     period CDATA #REQUIRED
 >
@@ -38,6 +38,14 @@
   <region>America</region>
     <country>US</country>
       <university name="Stanford University">
+          <campus name="Main campus" location="California" url="https://www.stanford.edu/">
+              <department name="Computer Science">
+                  <degree name="Msc" mingpa="3.5" period="2">
+                  </degree>
+                  <rank name="QS" ranking="2" year="2018" >
+                  <rank>
+              </department>
+          </campus>
       </university>
   <region>Australia</region>
     <country>Australia</country>
