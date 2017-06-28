@@ -35,6 +35,17 @@
 <world>
   <region name="europe" />
     <country name="UK" />
+      <university name="University of Oxford">
+        <campus name="Main campus" location="Oxford" url="www.ox.ac.uk">
+          <department name="Computer Science">
+            <degree name="Msc" mingpa="3.55" period="1">
+            </degree>
+            <rank name="QS" ranking="6" year="2018">
+            </rank>
+          </department>
+        </campus>
+      </university>
+    
   <region>America</region>
     <country>US</country>
       <university name="Stanford University">
