@@ -20,7 +20,7 @@
 <!ATTLIST department name CDATA #IMPLIED>
 <!ELEMENT rank (#PCDATA)>
 <!ATTLIST rank
-    name (ARWU|QS)
+    name (ARWU|QS) #REQUIRED
     ranking CDATA #IMPLIED
     year CDATA #REQUIRED
 >
